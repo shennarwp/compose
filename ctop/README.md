@@ -1,7 +1,9 @@
 Based on https://github.com/bcicen/ctop and https://ctop.sh/
 
 run: `docker-compose run --rm --name ctop ctop`
+
 `--name` is optional, i just like to tag name on each container
+
 or equivalent `docker run` command (without using this compose file):
 
 ```
