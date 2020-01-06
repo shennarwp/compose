@@ -1,4 +1,3 @@
-# based on https://github.com/moncho/dry https://moncho.github.io/dry/
 version: '3.7'
 services:
   dry:
