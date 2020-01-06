@@ -14,6 +14,6 @@ Grafana dashboards short explanation (also from [stefanprodan](https://github.co
 - Docker Host Dashboard shows key metrics for monitoring the resource usage of host system.
 - Docker Containers Dashboard shows key metrics for monitoring running containers.
 - Monitor Services Dashboard shows key metrics for monitoring the containers that make up the monitoring stack, that is the `exporters` and `collectors`.
-- Nginx Dashboard shows metrics for the nginx itself
+- Nginx Dashboard shows metrics for the nginx itself.
 
 More detailed description see [stefanprodan explanation](https://github.com/stefanprodan/dockprom#setup-grafana).
