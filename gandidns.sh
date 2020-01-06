@@ -8,6 +8,7 @@
 # HOW?
 # This script gets the external IP of your systems then connects to the Gandi
 # LiveDNS API and updates your dns record with the IP.
+# References: https://doc.livedns.gandi.net/ and https://nextnet.top/content/using-gandi-livedns-dynamic-dns-server
 
 # PREREQUISITES:
 # create zone file for this subdomain, see https://doc.livedns.gandi.net/#id6
