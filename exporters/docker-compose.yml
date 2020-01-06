@@ -1,0 +1,56 @@
+version: '2.1'
+
+services:
+
+  nodeexporter:
+    image: prom/node-exporter:v0.18.1
+    container_name: nodeexporter
+    volumes:
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
+      - /:/rootfs:ro
+    command:
+      - '--path.procfs=/host/proc'
+      - '--path.rootfs=/rootfs'
+      - '--path.sysfs=/host/sys'
+      - '--collector.filesystem.ignored-mount-points=^/(sys|proc|dev|host|etc)($$|/)'
+    restart: unless-stopped
+    networks:
+      - nginx
+    expose:
+      - 9100
+    labels:
+      org.label-schema.group: "monitoring"
+
+  cadvisor:
+    image: google/cadvisor:v0.33.0
+    container_name: cadvisor
+    volumes:
+      - /:/rootfs:ro
+      - /var/run:/var/run:ro
+      - /sys:/sys:ro
+      - /var/lib/docker/:/var/lib/docker:ro
+      - /cgroup:/cgroup:ro
+      - /dev/disk/:/dev/disk:ro
+    restart: unless-stopped
+    networks:
+      - nginx
+    labels:
+      org.label-schema.group: "monitoring"
+
+  nginxexporter:
+    image: nginx/nginx-prometheus-exporter:0.4.2
+    container_name: nginxexporter
+    environment:
+      - SCRAPE_URI=http://nginx/stub_status
+    restart: always
+    expose:
+      - 9113
+    networks:
+      - nginx
+    labels:
+      org.label-schema.group: "monitoring"
+
+networks:
+  nginx:
+    external: true

@@ -1,4 +1,4 @@
-Custom Jenkins image as container.
+Custom Jenkins image as container, run behind nginx.
 
 In order to Jenkins to be able to call / run another container in the host system, a docker runtime is installed on top of jenkins itself **AND** `/var/run/docker.sock` from host system is mapped to container.
 
