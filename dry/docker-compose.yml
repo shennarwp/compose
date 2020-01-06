@@ -3,8 +3,5 @@ services:
   dry:
     container_name: dry
     image: moncho/dry
-    restart: always
-    environment:
-      DOCKER_HOST: $DOCKER_HOST
     volumes:
     - /var/run/docker.sock:/var/run/docker.sock
