@@ -8,7 +8,9 @@
 # HOW?
 # This script gets the external IP of your systems then connects to the Gandi
 # LiveDNS API and updates your dns record with the IP.
-# References: https://doc.livedns.gandi.net/ and https://nextnet.top/content/using-gandi-livedns-dynamic-dns-server
+# References: https://doc.livedns.gandi.net/
+#             https://nextnet.top/content/using-gandi-livedns-dynamic-dns-server
+#             https://virtuallytd.com/post/dynamic-dns-using-gandi/
 
 # PREREQUISITES:
 # create zone file for this subdomain, see https://doc.livedns.gandi.net/#id6
@@ -31,7 +33,7 @@ SUBDOMAIN="subdomain"
 # Get external IP address
 EXT_IP=$(curl -s ifconfig.me)
 if [ -z "$EXT_IP" ]; then
-    echo "Something went wrong. Can not get your IP from $IP_SERVICE"
+    echo "Something went wrong. Can not get your IP from ifconfig.me"
     exit 1
 fi
 
