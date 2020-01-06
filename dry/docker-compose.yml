@@ -1,0 +1,11 @@
+# based on https://github.com/moncho/dry https://moncho.github.io/dry/
+version: '3.7'
+services:
+  dry:
+    container_name: dry
+    image: moncho/dry
+    restart: always
+    environment:
+      DOCKER_HOST: $DOCKER_HOST
+    volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
