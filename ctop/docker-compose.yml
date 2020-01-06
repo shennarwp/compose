@@ -1,0 +1,8 @@
+# based on https://github.com/bcicen/ctop
+version: '3.7'
+services:
+  ctop:
+    container_name: ctop
+    image: 'quay.io/vektorlab/ctop:latest'
+    volumes:
+      - '/var/run/docker.sock:/var/run/docker.sock:ro'
