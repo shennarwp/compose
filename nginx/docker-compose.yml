@@ -1,0 +1,21 @@
+version: '3.7'
+services:
+  nginx:
+    container_name: nginx
+    image: nginx:alpine
+    restart: always
+    volumes:
+      - ./conf:/etc/nginx/conf.d
+      - ./credentials/node-exporter.htpasswd:/etc/nginx/basic_auth/node-exporter.htpasswd
+      - ./credentials/cadvisor.htpasswd:/etc/nginx/basic_auth/cadvisor.htpasswd
+      - ./credentials/nginxexporter.htpasswd:/etc/nginx/basic_auth/nginxexporter.htpasswd
+      - ./credentials/pushgateway.htpasswd:/etc/nginx/basic_auth/pushgateway.htpasswd
+      - ./credentials/prometheus.htpasswd:/etc/nginx/basic_auth/prometheus.htpasswd
+    ports:
+      - 80:80
+    networks:
+      - nginx
+
+networks:
+  nginx:
+    external: true
