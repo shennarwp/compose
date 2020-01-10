@@ -8,4 +8,4 @@ run: `docker-compose run --rm --name htop htop`
 
 or equivalent `docker run` command (without using this compose file):
 
-`docker run --rm -it --pid host frapsoft/htop`
+`docker run --rm -it --name=htop --pid host frapsoft/htop`
