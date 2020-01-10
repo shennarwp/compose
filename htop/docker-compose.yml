@@ -1,0 +1,7 @@
+version: '3.7'
+services:
+  htop:
+    container_name: htop
+    image: frapsoft/htop
+    restart: always
+    pid: "host"
