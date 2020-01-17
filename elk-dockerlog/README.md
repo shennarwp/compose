@@ -12,6 +12,10 @@ Why not outputting filebeat directly to elasticsearch?
 - in a case where maybe I want to add another `filebeat` from another docker host in the future
 - end configuration: `filebeat` -> `logstash` -> `elasticsearch` -> `kibana`
 
+How to:
+- `docker-compose up`
+- configure an index pattern as `logstash-*` and click *Discover*.
+
 TODO
 - dashboard for kibana
 - unify compose style (either with environment or with .env or mapping config file directly)
