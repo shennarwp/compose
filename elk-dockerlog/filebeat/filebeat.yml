@@ -1,0 +1,18 @@
+# filebeat.yml
+
+filebeat.inputs:
+- type: docker
+  containers.ids: '*'
+  json.message_key: message
+  json.keys_under_root: true
+  json.add_error_key: true
+  json.overwrite_keys: true
+
+processors:
+- add_docker_metadata: ~
+
+output.logstash:
+  hosts: ["logstash:5044"]
+
+logging.to_files: true
+logging.to_syslog: false

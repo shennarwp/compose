@@ -11,6 +11,9 @@ services:
       - ./credentials/nginxexporter.htpasswd:/etc/nginx/basic_auth/nginxexporter.htpasswd
       - ./credentials/pushgateway.htpasswd:/etc/nginx/basic_auth/pushgateway.htpasswd
       - ./credentials/prometheus.htpasswd:/etc/nginx/basic_auth/prometheus.htpasswd
+      - ./credentials/logstash.htpasswd:/etc/nginx/basic_auth/logstash.htpasswd
+      - ./credentials/elasticsearch.htpasswd:/etc/nginx/basic_auth/elasticsearch.htpasswd
+      - ./credentials/kibana.htpasswd:/etc/nginx/basic_auth/kibana.htpasswd
     ports:
       - 80:80
     networks:
