@@ -15,6 +15,7 @@ Why not outputting filebeat directly to elasticsearch?
 How to:
 - `docker-compose up`
 - configure an index pattern as `logstash-*` and click *Discover*.
+- timefilter: `@timestamp`
 
 TODO
 - dashboard for kibana
