@@ -4,8 +4,9 @@ jobs:
   yamllinter:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    - name: yaml-lint
-      uses: ibiqlik/action-yamllint@master
-      with:
-        config_file: .yamllint.yml
+      - name: set up git repository
+        uses: actions/checkout@master
+      - name: yaml-lint
+        uses: ibiqlik/action-yamllint@master
+        with:
+          config_file: .yamllint.yml

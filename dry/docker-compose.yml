@@ -4,4 +4,4 @@ services:
     container_name: dry
     image: moncho/dry
     volumes:
-    - /var/run/docker.sock:/var/run/docker.sock
+      - /var/run/docker.sock:/var/run/docker.sock
