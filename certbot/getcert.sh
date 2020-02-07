@@ -15,7 +15,7 @@ if [ ! -e "$data_path/conf/options-ssl-nginx.conf" ] || [ ! -e "$data_path/conf/
 	echo
 fi
 
-echo "### Requesting Let's Encrypt certificate for $domains ..."
+echo "### Requesting Let's Encrypt certificate for ${domains[*]} ..."
 #Join $domains to -d args
 domain_args=""
 for domain in "${domains[@]}"; do
