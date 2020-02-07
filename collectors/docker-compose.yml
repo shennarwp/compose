@@ -5,8 +5,8 @@ networks:
     external: true
 
 volumes:
-    prometheus_data: {}
-    grafana_data: {}
+  prometheus_data: {}
+  grafana_data: {}
 
 services:
 
