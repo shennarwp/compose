@@ -10,3 +10,11 @@ jobs:
         uses: ibiqlik/action-yamllint@master
         with:
           config_file: .yamllint.yml
+
+  shellcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - name: set up git repository
+        uses: actions/checkout@v1
+      - name: Lint check
+        uses: azohra/shell-linter@v0.2.0
