@@ -18,14 +18,14 @@ grafana_api() {
   local url=$2
   local params=$3
   local bodyfile=$4
-  local response
+  #local response
   local cmd
 
   cmd="curl -L -s --fail -H \"Accept: application/json\" -H \"Content-Type: application/json\" -X ${verb} -k ${GRAFANA_URL}${url}"
   [[ -n "${params}" ]] && cmd="${cmd} -d \"${params}\""
   [[ -n "${bodyfile}" ]] && cmd="${cmd} --data @${bodyfile}"
   echo "Running ${cmd}"
-  eval ${cmd} || return 1
+  eval "${cmd}" || return 1
   return 0
 }
 
@@ -33,13 +33,13 @@ wait_for_api() {
   while ! grafana_api GET /api/user/preferences
   do
     sleep 5
-  done 
+  done
 }
 
 install_datasources() {
   local datasource
 
-  for datasource in ${DATASOURCES_PATH}/*.json
+  for datasource in "${DATASOURCES_PATH}"/*.json
   do
     if [[ -f "${datasource}" ]]; then
       echo "Installing datasource ${datasource}"
@@ -55,7 +55,7 @@ install_datasources() {
 install_dashboards() {
   local dashboard
 
-  for dashboard in ${DASHBOARDS_PATH}/*.json
+  for dashboard in "${DASHBOARDS_PATH}"/*.json
   do
     if [[ -f "${dashboard}" ]]; then
       echo "Installing dashboard ${dashboard}"
