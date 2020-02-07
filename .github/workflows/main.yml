@@ -6,7 +6,7 @@ jobs:
     steps:
       - name: set up git repository
         uses: actions/checkout@master
-      - name: yaml-lint
+      - name: lint all yaml files
         uses: ibiqlik/action-yamllint@master
         with:
           config_file: .yamllint.yml
@@ -16,5 +16,5 @@ jobs:
     steps:
       - name: set up git repository
         uses: actions/checkout@v1
-      - name: Lint check
+      - name: lint all shell script
         uses: azohra/shell-linter@v0.2.0
