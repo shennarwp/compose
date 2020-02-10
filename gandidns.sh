@@ -42,7 +42,7 @@ CURRENT_ZONE_HREF=$(curl -s -H "X-Api-Key: $APIKEY" $API/domains/$DOMAIN | jq -r
 if [ -z "$CURRENT_ZONE_HREF" ]; then
     echo "Something went wrong. Can not get current Zone for the provided domain"
     exit 1
-fi
+
 
 # Update the A Record of the subdomain using PUT
 curl -D- -X PUT -H "Content-Type: application/json" \
