@@ -1,12 +1,12 @@
 # filebeat.yml
 
 filebeat.inputs:
-- type: log
+  - type: log
   paths:
     - '/var/lib/docker/containers/*/*.log'
 
 processors:
-- add_docker_metadata:
+  - add_docker_metadata:
     host: "unix:///var/run/docker.sock"
 
 - decode_json_fields:
