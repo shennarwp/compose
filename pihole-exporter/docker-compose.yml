@@ -1,0 +1,19 @@
+version: '3.7'
+services:
+  pihole-exporter:
+    container_name: pihole-exporter
+    image: 'ekofr/pihole-exporter:latest'
+    restart: always
+    environment:
+      - PIHOLE_HOSTNAME=HOSTNAMEORIPADDRESS
+      - PIHOLE_PASSWORD=PASSWORD
+      - INTERVAL=30s
+      - PORT=9617
+    expose:
+      - 9617
+    networks:
+      - nginx
+
+networks:
+  nginx:
+    external: true
