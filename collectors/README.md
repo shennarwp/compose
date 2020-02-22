@@ -16,4 +16,7 @@ Grafana dashboards short explanation (also from [stefanprodan](https://github.co
 - Monitor Services Dashboard shows key metrics for monitoring the containers that make up the monitoring stack, that is the `exporters` and `collectors`.
 - Nginx Dashboard shows metrics for the nginx itself.
 
+Additional:
+- pihole Dashboard show statistic from pihole, needs to be manually imported inside grafana.
+
 More detailed description see [stefanprodan explanation](https://github.com/stefanprodan/dockprom#setup-grafana).
