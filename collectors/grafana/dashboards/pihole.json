@@ -291,7 +291,7 @@
       "fontSize": "80%",
       "format": "short",
       "gridPos": {
-        "h": 6,
+        "h": 7,
         "w": 9,
         "x": 15,
         "y": 0
@@ -471,7 +471,7 @@
         "h": 7,
         "w": 9,
         "x": 15,
-        "y": 6
+        "y": 7
       },
       "id": 18,
       "interval": null,
@@ -680,49 +680,6 @@
     },
     {
       "aliasColors": {},
-      "breakPoint": "50%",
-      "cacheTimeout": null,
-      "combine": {
-        "label": "Others",
-        "threshold": 0
-      },
-      "datasource": "Prometheus",
-      "fontSize": "80%",
-      "format": "short",
-      "gridPos": {
-        "h": 7,
-        "w": 9,
-        "x": 15,
-        "y": 13
-      },
-      "id": 16,
-      "interval": null,
-      "legend": {
-        "show": true,
-        "values": true
-      },
-      "legendType": "Right side",
-      "links": [],
-      "maxDataPoints": 3,
-      "nullPointMode": "connected",
-      "options": {},
-      "pieType": "pie",
-      "strokeWidth": 1,
-      "targets": [
-        {
-          "expr": "pihole_forward_destinations",
-          "legendFormat": "{{ destination }}",
-          "refId": "A"
-        }
-      ],
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "Forward destinations",
-      "type": "grafana-piechart-panel",
-      "valueName": "current"
-    },
-    {
-      "aliasColors": {},
       "bars": false,
       "dashLength": 10,
       "dashes": false,
@@ -892,6 +849,49 @@
         "align": false,
         "alignLevel": null
       }
+    },
+    {
+      "aliasColors": {},
+      "breakPoint": "50%",
+      "cacheTimeout": null,
+      "combine": {
+        "label": "Others",
+        "threshold": 0
+      },
+      "datasource": "Prometheus",
+      "fontSize": "80%",
+      "format": "short",
+      "gridPos": {
+        "h": 6,
+        "w": 9,
+        "x": 15,
+        "y": 14
+      },
+      "id": 16,
+      "interval": null,
+      "legend": {
+        "show": true,
+        "values": true
+      },
+      "legendType": "Right side",
+      "links": [],
+      "maxDataPoints": 3,
+      "nullPointMode": "connected",
+      "options": {},
+      "pieType": "pie",
+      "strokeWidth": 1,
+      "targets": [
+        {
+          "expr": "pihole_forward_destinations",
+          "legendFormat": "{{ destination }}",
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Forward destinations",
+      "type": "grafana-piechart-panel",
+      "valueName": "current"
     },
     {
       "aliasColors": {},
@@ -1102,7 +1102,7 @@
     "list": []
   },
   "time": {
-    "from": "now-30m",
+    "from": "now-6h",
     "to": "now"
   },
   "timepicker": {
@@ -1122,5 +1122,5 @@
   "timezone": "",
   "title": "pihole",
   "uid": "VmJY4_QZk",
-  "version": 2
+  "version": 3
 }
