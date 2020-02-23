@@ -363,6 +363,7 @@
       "targets": [
         {
           "expr": "pihole_dns_queries_all_types",
+          "legendFormat": "Total queries",
           "refId": "A"
         }
       ],
@@ -633,7 +634,7 @@
       "targets": [
         {
           "expr": "pihole_ads_blocked_today",
-          "legendFormat": "",
+          "legendFormat": "Total ads blocked",
           "refId": "A"
         }
       ],
@@ -805,7 +806,7 @@
       "targets": [
         {
           "expr": "pihole_ads_percentage_today",
-          "legendFormat": "{{ job }}",
+          "legendFormat": "% of ads blocked",
           "refId": "A"
         }
       ],
@@ -1122,5 +1123,5 @@
   "timezone": "",
   "title": "pihole",
   "uid": "VmJY4_QZk",
-  "version": 3
+  "version": 4
 }
