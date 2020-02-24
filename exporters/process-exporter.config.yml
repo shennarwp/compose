@@ -1,0 +1,7 @@
+process_names:
+  - comm:
+    - dockerd
+    - containerd
+    - bash
+    - sshd
+    - systemd
