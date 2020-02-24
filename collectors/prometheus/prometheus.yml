@@ -55,7 +55,7 @@ scrape_configs:
     static_configs:
       - targets: ['pihole-exporter:9617']
 
-#alerting:
+# alerting:
 #  alertmanagers:
 #  - scheme: http
 #    static_configs:
