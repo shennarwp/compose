@@ -51,6 +51,21 @@ services:
     labels:
       org.label-schema.group: "monitoring"
 
+  process-exporter:
+    image: ncabatoff/process-exporter
+    container_name: processexporter
+    expose:
+      - 9256
+    privileged: true
+    volumes:
+      - '/proc:/host/proc'
+      - './process-exporter.config.yml:/process-exporter.config.yml'
+    command: '--procfs /host/proc -config.path /process-exporter.config.yml'
+    networks:
+      - nginx
+    labels:
+      org.label-schema.group: "monitoring"
+
 networks:
   nginx:
     external: true
