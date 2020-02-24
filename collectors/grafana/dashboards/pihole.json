@@ -1094,6 +1094,7 @@
       "type": "table"
     }
   ],
+  "refresh": "30s",
   "schemaVersion": 19,
   "style": "dark",
   "tags": [
@@ -1103,7 +1104,7 @@
     "list": []
   },
   "time": {
-    "from": "now-6h",
+    "from": "now-1h",
     "to": "now"
   },
   "timepicker": {
@@ -1123,5 +1124,5 @@
   "timezone": "",
   "title": "pihole",
   "uid": "VmJY4_QZk",
-  "version": 4
+  "version": 8
 }
