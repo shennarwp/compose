@@ -9,6 +9,7 @@ services:
       - ./credentials/node-exporter.htpasswd:/etc/nginx/basic_auth/node-exporter.htpasswd
       - ./credentials/cadvisor.htpasswd:/etc/nginx/basic_auth/cadvisor.htpasswd
       - ./credentials/nginxexporter.htpasswd:/etc/nginx/basic_auth/nginxexporter.htpasswd
+      - ./credentials/processexporter.htpasswd:/etc/nginx/basic_auth/processexporter.htpasswd
       - ./credentials/pushgateway.htpasswd:/etc/nginx/basic_auth/pushgateway.htpasswd
       - ./credentials/prometheus.htpasswd:/etc/nginx/basic_auth/prometheus.htpasswd
       - ./credentials/logstash.htpasswd:/etc/nginx/basic_auth/logstash.htpasswd
