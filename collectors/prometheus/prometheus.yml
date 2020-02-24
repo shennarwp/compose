@@ -44,7 +44,14 @@ scrape_configs:
       - targets: ['nginxexporter:9113']
     metrics_path: '/metrics'
 
+  - job_name: 'process'
+    scrape_interval: 10s
+    static_configs:
+      - targets: ['processexporter:9256']
+    metrics_path: '/metrics'
+
   - job_name: 'pihole'
+    scrape_interval: 10s
     static_configs:
       - targets: ['pihole-exporter:9617']
 
