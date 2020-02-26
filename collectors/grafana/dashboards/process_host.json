@@ -1,22 +1,12 @@
-{
+{"dashboard": {
   "annotations": {
-    "list": [
-      {
-        "builtIn": 1,
-        "datasource": "-- Grafana --",
-        "enable": true,
-        "hide": true,
-        "iconColor": "rgba(0, 211, 255, 1)",
-        "name": "Annotations & Alerts",
-        "type": "dashboard"
-      }
-    ]
+    "list": []
   },
   "description": "Process metrics exported by https://github.com/ncabatoff/process-exporter.",
   "editable": true,
   "gnetId": 249,
   "graphTooltip": 1,
-  "id": 15,
+  "id": null,
   "iteration": 1582574638928,
   "links": [
     {
@@ -745,6 +735,6 @@
   },
   "timezone": "browser",
   "title": "Host Processes",
-  "uid": "Ge6NGeQZz",
+  "uid": null,
   "version": 4
-}
+}}

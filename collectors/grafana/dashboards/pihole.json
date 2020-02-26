@@ -1,22 +1,12 @@
-{
+{"dashboard": {
   "annotations": {
-    "list": [
-      {
-        "builtIn": 1,
-        "datasource": "-- Grafana --",
-        "enable": true,
-        "hide": true,
-        "iconColor": "rgba(0, 211, 255, 1)",
-        "name": "Annotations & Alerts",
-        "type": "dashboard"
-      }
-    ]
+    "list": []
   },
   "description": "",
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 6,
+  "id": null,
   "links": [],
   "panels": [
     {
@@ -1123,6 +1113,6 @@
   },
   "timezone": "",
   "title": "Pihole",
-  "uid": "VmJY4_QZk",
+  "uid": null,
   "version": 8
-}
+}}
