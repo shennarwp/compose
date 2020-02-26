@@ -1,5 +1,4 @@
-{"dashboard": {
-  "id": null,
+{
   "title": "Monitor Services",
   "tags": [
     "prometheus"
@@ -3409,4 +3408,4 @@
   "version": 22,
   "links": [],
   "gnetId": null
-}}
+}

@@ -1,4 +1,4 @@
-{"dashboard": {
+{
   "annotations": {
     "list": []
   },
@@ -1115,4 +1115,4 @@
   "title": "Pihole",
   "uid": null,
   "version": 8
-}}
+}
