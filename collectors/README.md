@@ -17,7 +17,7 @@ Grafana dashboards short explanation (also from [stefanprodan](https://github.co
 - Nginx dashboard shows metrics for the nginx itself.
 
 Additional dashboards:
-- pihole dashboard show statistic from pihole, needs to be manually imported inside grafana.
+- pihole dashboard show statistic from pihole
 - process explorer dashboard show metrics from select host processes collected by [process-explorer](https://github.com/ncabatoff/process-exporter). See which processes is monitored in config file: `exporters/process-exporter.config.yml`
 
 More detailed description see [stefanprodan explanation](https://github.com/stefanprodan/dockprom#setup-grafana).
