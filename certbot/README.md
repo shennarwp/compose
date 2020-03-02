@@ -16,7 +16,7 @@
 8. rerun `cerbot/getcert.sh`
 9. paste / insert again https / 443 server block in `nginx/conf/nginx.conf` AND the return 301 block inside server 80 block
 10. stop, remove, and restart nginx container
-11. start certbot container with `docker-compose` up -d for auto-renew
+11. start certbot container with `docker-compose up -d` for auto-renew
 
 Explanation:
 - The certificates is obtained by certbot, and saved into the data_path directory.
