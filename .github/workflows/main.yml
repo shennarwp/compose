@@ -17,4 +17,4 @@ jobs:
       - name: set up git repository
         uses: actions/checkout@v1
       - name: lint all shell script
-        uses: azohra/shell-linter@v0.2.0
+        uses: azohra/shell-linter@latest
