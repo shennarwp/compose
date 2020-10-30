@@ -11,7 +11,7 @@ volumes:
 services:
 
   prometheus:
-    image: prom/prometheus:v2.16.0
+    image: prom/prometheus:v2.22.0
     container_name: prometheus
     volumes:
       - ./prometheus/:/etc/prometheus/
@@ -86,7 +86,7 @@ services:
 #      org.label-schema.group: "monitoring"
 
   grafana:
-    image: grafana/grafana:6.3.6
+    image: grafana/grafana:7.3.1
     container_name: grafana
     volumes:
       - grafana_data:/var/lib/grafana
@@ -105,7 +105,7 @@ services:
       org.label-schema.group: "monitoring"
 
   pushgateway:
-    image: prom/pushgateway:v1.1.0
+    image: prom/pushgateway:v1.3.0
     container_name: pushgateway
     restart: unless-stopped
     expose:
