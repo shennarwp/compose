@@ -3,7 +3,7 @@ version: '3.7'
 services:
 
   nodeexporter:
-    image: prom/node-exporter:v0.18.1
+    image: prom/node-exporter:v1.0.1
     container_name: nodeexporter
     volumes:
       - /proc:/host/proc:ro
@@ -39,7 +39,7 @@ services:
       org.label-schema.group: "monitoring"
 
   nginxexporter:
-    image: nginx/nginx-prometheus-exporter:0.6.0
+    image: nginx/nginx-prometheus-exporter:0.8.0
     container_name: nginxexporter
     environment:
       - SCRAPE_URI=http://nginx/stub_status
@@ -52,7 +52,7 @@ services:
       org.label-schema.group: "monitoring"
 
   process-exporter:
-    image: ncabatoff/process-exporter
+    image: ncabatoff/process-exporter:0.7.2
     container_name: processexporter
     expose:
       - 9256
