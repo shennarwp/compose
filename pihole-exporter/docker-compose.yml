@@ -2,7 +2,7 @@ version: '3.7'
 services:
   pihole-exporter:
     container_name: pihole-exporter
-    image: 'ekofr/pihole-exporter:latest'
+    image: 'ekofr/pihole-exporter:0.0.10'
     restart: always
     environment:
       - PIHOLE_HOSTNAME=HOSTNAMEORIPADDRESS
@@ -13,6 +13,8 @@ services:
       - 9617
     networks:
       - nginx
+    labels:
+      org.label-schema.group: "monitoring"
 
 networks:
   nginx:
