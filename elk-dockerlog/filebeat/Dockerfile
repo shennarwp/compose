@@ -1,4 +1,4 @@
-FROM docker.elastic.co/beats/filebeat:7.5.1
+FROM docker.elastic.co/beats/filebeat:7.9.3
 COPY filebeat.yml /usr/share/filebeat/filebeat.yml
 # must run as root to access /var/lib/docker and /var/run/docker.sock
 USER root
