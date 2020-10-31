@@ -1,0 +1,18 @@
+version: '3.7'
+services:
+  transmission-exporter:
+    container_name: transmission-exporter
+    image: metalmatze/transmission-exporter:0.3.0
+    restart: always
+    environment:
+      TRANSMISSION_ADDR: http://transmission:9091
+    expose:
+      - 19091
+    networks:
+      - nginx
+    labels:
+      org.label-schema.group: "monitoring"
+
+networks:
+  nginx:
+    external: true
