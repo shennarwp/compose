@@ -54,6 +54,12 @@ scrape_configs:
     scrape_interval: 10s
     static_configs:
       - targets: ['pihole-exporter:9617']
+  
+  - job_name: 'transmission'
+    scrape_interval: 10s
+    static_configs:
+      - targets: ['transmission-exporter:19091']
+    metrics_path: '/metrics'
 
 # alerting:
 #  alertmanagers:
