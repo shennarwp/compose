@@ -5,7 +5,7 @@ services:
     image: metalmatze/transmission-exporter:0.3.0
     restart: always
     environment:
-      TRANSMISSION_ADDR: http://transmission:9091
+      TRANSMISSION_ADDR: http://192.168.178.6:9091
     expose:
       - 19091
     networks:
