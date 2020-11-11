@@ -15,6 +15,7 @@ services:
       - PEERS=1                       # how many peers config will be created
       - PEERDNS=auto
       - INTERNAL_SUBNET=10.13.13.0
+      - ALLOWEDIPS=192.168.178.0/24   # will allow client to access local network
     volumes:
       - /path/to/config:/config       # will contain the peer config file & the QR code
       - /lib/modules:/lib/modules
