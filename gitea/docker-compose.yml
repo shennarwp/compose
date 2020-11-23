@@ -1,0 +1,38 @@
+version: "3"
+
+networks:
+  gitea:
+    external: false
+
+services:
+  gitea:
+    image: gitea/gitea:1.12.6
+    container_name: gitea
+    env_file:
+      - ./environment.env
+    restart: always
+    networks:
+      - nginx
+    volumes:
+      - ./gitea:/data
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    expose:
+      - 3000
+    depends_on:
+      - pg_gitea
+
+  pg_gitea:
+    image: postgres:12.5-alpine
+    container_name: pg_gitea
+    restart: always
+    env_file:
+      - ./environment.env
+    networks:
+      - nginx
+    volumes:
+      - ./postgres:/var/lib/postgresql/data
+
+networks:
+  nginx:
+    external: true
