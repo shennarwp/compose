@@ -1,0 +1,23 @@
+version: "3.7"
+
+services:
+  folding-at-home:
+    image: yurinnick/folding-at-home
+    container_name: fah
+    volumes:
+      - ./config.xml:/opt/fahclient/config.xml
+    environment:
+      - USER=username
+      - TEAM=teamcode
+      - ENABLE_GPU=false
+      - ENABLE_SMP=true
+    ports:
+      - 7396:7396
+      - 36330:36330
+    restart: unless-stopped
+    networks:
+      - dist
+
+networks:
+  dist:
+    external: true
