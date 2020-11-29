@@ -628,7 +628,9 @@
         "rightSide": true,
         "show": true,
         "total": false,
-        "values": true
+        "values": true,
+        "sort": "current",
+        "sortDesc": true
       },
       "lines": true,
       "linewidth": 1,
