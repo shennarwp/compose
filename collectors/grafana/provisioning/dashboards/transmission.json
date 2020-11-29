@@ -657,7 +657,7 @@
       "title": "Ratio $Torrents",
       "tooltip": {
         "shared": true,
-        "sort": 0,
+        "sort": 2,
         "value_type": "individual"
       },
       "type": "graph",
@@ -713,7 +713,7 @@
         "query": "label_values(exported_name)",
         "refresh": 1,
         "regex": "",
-        "sort": 0,
+        "sort": 2,
         "tagValuesQuery": "",
         "tags": [],
         "tagsQuery": "",
