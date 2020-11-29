@@ -60,7 +60,7 @@ groups:
       description: "Jenkins CPU usage is {{ humanize $value}}%."
 
   - alert: jenkins_high_memory
-    expr: sum(container_memory_usage_bytes{name="jenkins"}) > 1200000000
+    expr: sum(container_memory_usage_bytes{name="jenkins"}) > 1500000000
     for: 30s
     labels:
       severity: warning
@@ -68,3 +68,83 @@ groups:
       summary: "Jenkins high memory usage"
       description: "Jenkins memory consumption is at {{ humanize $value}}."
 
+  - alert: synapse_down
+    expr: absent(container_memory_usage_bytes{name="synapse"})
+    for: 30s
+    labels:
+      severity: critical
+    annotations:
+      summary: "Synapse down"
+      description: "Synapse container is down for more than 30 seconds."
+
+  - alert: synapse_high_cpu
+    expr: sum(rate(container_cpu_usage_seconds_total{name="synapse"}[1m])) / count(node_cpu_seconds_total{mode="system"}) * 100 > 10
+    for: 30s
+    labels:
+      severity: warning
+    annotations:
+      summary: "Synapse high CPU usage"
+      description: "Synapse CPU usage is {{ humanize $value}}%."
+
+  - alert: synapse_high_memory
+    expr: sum(container_memory_usage_bytes{name="synapse"}) > 1500000000
+    for: 30s
+    labels:
+      severity: warning
+    annotations:
+      summary: "Synapse high memory usage"
+      description: "Synapse memory consumption is at {{ humanize $value}}."
+
+  - alert: pg_synapse_down
+    expr: absent(container_memory_usage_bytes{name="pg_synapse"})
+    for: 30s
+    labels:
+      severity: critical
+    annotations:
+      summary: "Synapse's database down"
+      description: "Synapse's database container is down for more than 30 seconds."
+
+  - alert: pg_synapse_high_cpu
+    expr: sum(rate(container_cpu_usage_seconds_total{name="pg_synapse"}[1m])) / count(node_cpu_seconds_total{mode="system"}) * 100 > 10
+    for: 30s
+    labels:
+      severity: warning
+    annotations:
+      summary: "Synapse's database high CPU usage"
+      description: "Synapse's database CPU usage is {{ humanize $value}}%."
+
+  - alert: pg_synapse_high_memory
+    expr: sum(container_memory_usage_bytes{name="pg_synapse"}) > 1500000000
+    for: 30s
+    labels:
+      severity: warning
+    annotations:
+      summary: "Synapse's database high memory usage"
+      description: "Synapse's database memory consumption is at {{ humanize $value}}."
+
+  - alert: elasticsearch_down
+    expr: absent(container_memory_usage_bytes{name="elasticsearch"})
+    for: 30s
+    labels:
+      severity: critical
+    annotations:
+      summary: "Elasticsearch down"
+      description: "Elasticsearch container is down for more than 30 seconds."
+
+  - alert: elasticsearch_high_cpu
+    expr: sum(rate(container_cpu_usage_seconds_total{name="elasticsearch"}[1m])) / count(node_cpu_seconds_total{mode="system"}) * 100 > 10
+    for: 30s
+    labels:
+      severity: warning
+    annotations:
+      summary: "Elasticsearch high CPU usage"
+      description: "Elasticsearch CPU usage is {{ humanize $value}}%."
+
+  - alert: elasticsearch_high_memory
+    expr: sum(container_memory_usage_bytes{name="elasticsearch"}) > 1500000000
+    for: 30s
+    labels:
+      severity: warning
+    annotations:
+      summary: "Elasticsearch high memory usage"
+      description: "Elasticsearch memory consumption is at {{ humanize $value}}."
