@@ -60,6 +60,12 @@ scrape_configs:
     static_configs:
       - targets: ['transmission-exporter:19091']
     metrics_path: '/metrics'
+    
+  - job_name: "synapse"
+    scrape_interval: 10s
+    metrics_path: "/_synapse/metrics"
+    static_configs:
+      - targets: ["synapse:9000"]
 
 # alerting:
 #  alertmanagers:
