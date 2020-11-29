@@ -380,13 +380,15 @@
       "legend": {
         "alignAsTable": true,
         "avg": true,
-        "current": false,
+        "current": true,
         "max": true,
-        "min": true,
+        "min": false,
         "rightSide": true,
         "show": true,
         "total": false,
-        "values": true
+        "values": true,
+        "sort": "current",
+        "sortDesc": true
       },
       "lines": true,
       "linewidth": 2,
@@ -480,13 +482,15 @@
       "legend": {
         "alignAsTable": true,
         "avg": true,
-        "current": false,
+        "current": true,
         "max": true,
-        "min": true,
+        "min": false,
         "rightSide": true,
         "show": true,
         "total": false,
-        "values": true
+        "values": true,
+        "sort": "current",
+        "sortDesc": true
       },
       "lines": true,
       "linewidth": 2,
