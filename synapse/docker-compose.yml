@@ -31,12 +31,12 @@ services:
     container_name: "pg_synapse"
     restart: always
     environment:
-        POSTGRES_PASSWORD: password
-        POSTGRES_USER: synapse
-        POSTGRES_DB: synapse
-        POSTGRES_INITDB_ARGS: "--encoding='UTF8' --lc-collate='C' --lc-ctype='C'"
+      POSTGRES_PASSWORD: password
+      POSTGRES_USER: synapse
+      POSTGRES_DB: synapse
+      POSTGRES_INITDB_ARGS: "--encoding='UTF8' --lc-collate='C' --lc-ctype='C'"
     volumes:
-        - "pg_synapsedata:/var/lib/postgresql/"
+      - "pg_synapsedata:/var/lib/postgresql/"
     networks:
       - nginx
 
@@ -45,7 +45,7 @@ services:
     container_name: "element"
     restart: always
     volumes:
-        - "./config.json:/app/config.json"
+      - "./config.json:/app/config.json"
     expose:
       - 80
     networks:
