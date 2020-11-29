@@ -1,4 +1,5 @@
 version: "3.7"
+
 services:
   jenkins:
     image: jenkins-with-docker
@@ -16,8 +17,10 @@ services:
       - 8080
     networks:
       - nginx
+      
 volumes:
   home:
+  
 networks:
   nginx:
     external: true
