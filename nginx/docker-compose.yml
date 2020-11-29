@@ -1,4 +1,5 @@
 version: '3.7'
+
 services:
   nginx:
     container_name: nginx
@@ -15,6 +16,8 @@ services:
       - ./credentials/logstash.htpasswd:/etc/nginx/basic_auth/logstash.htpasswd
       - ./credentials/elasticsearch.htpasswd:/etc/nginx/basic_auth/elasticsearch.htpasswd
       - ./credentials/kibana.htpasswd:/etc/nginx/basic_auth/kibana.htpasswd
+      - /path/to/nginx/data/certbot/conf:/etc/letsencrypt
+      - /path/to/nginx/data/certbot/www:/var/www/certbot
     ports:
       - 80:80
     networks:
