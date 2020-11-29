@@ -1,0 +1,59 @@
+version: "3.3"
+
+services:
+  synapse:
+    image: "matrixdotorg/synapse:v1.23.0"
+    container_name: "synapse"
+    restart: always
+    volumes:
+      - "./data:/data"
+    environment:
+      LETSENCRYPT_HOST: "yourdomain.com"
+      SYNAPSE_SERVER_NAME: "yourdomain.com"
+      SYNAPSE_REPORT_STATS: "yes"
+    expose:
+      - 8008
+    networks:
+      - nginx
+    dns:
+      - 84.200.69.80
+      - 84.200.70.40
+      - 88.198.91.187
+      - 95.216.181.228
+    dns_search:
+      - resolver1.dns.watch
+      - resolver2.dns.watch
+      - dot.centraleu.pi-dns.com
+      - dot.northeu.pi-dns.com
+
+  pg_synapse:
+    image: postgres:12.5-alpine
+    container_name: "pg_synapse"
+    restart: always
+    environment:
+        POSTGRES_PASSWORD: password
+        POSTGRES_USER: synapse
+        POSTGRES_DB: synapse
+        POSTGRES_INITDB_ARGS: "--encoding='UTF8' --lc-collate='C' --lc-ctype='C'"
+    volumes:
+        - "pg_synapsedata:/var/lib/postgresql/"
+    networks:
+      - nginx
+
+  element:
+    image: vectorim/riot-web:v1.7.14
+    container_name: "element"
+    restart: always
+    volumes:
+        - "./config.json:/app/config.json"
+    expose:
+      - 80
+    networks:
+      - nginx
+
+volumes:
+  pg_synapsedata:
+
+networks:
+  nginx:
+    external: true
