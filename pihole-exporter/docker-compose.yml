@@ -1,4 +1,5 @@
 version: '3.7'
+
 services:
   pihole-exporter:
     container_name: pihole-exporter
