@@ -17,10 +17,10 @@ services:
       - 8080
     networks:
       - nginx
-      
+
 volumes:
   home:
-  
+
 networks:
   nginx:
     external: true
