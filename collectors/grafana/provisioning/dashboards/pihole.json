@@ -290,6 +290,9 @@
       "interval": null,
       "legend": {
         "show": true,
+        "current": true,
+        "sortDesc": true,
+        "sort": "current",
         "values": true
       },
       "legendType": "Right side",
@@ -468,6 +471,9 @@
       "interval": null,
       "legend": {
         "show": true,
+        "current": true,
+        "sortDesc": true,
+        "sort": "current",
         "values": true
       },
       "legendType": "Right side",
@@ -862,6 +868,9 @@
       "interval": null,
       "legend": {
         "show": true,
+        "current": true,
+        "sortDesc": true,
+        "sort": "current",
         "values": true
       },
       "legendType": "Right side",
