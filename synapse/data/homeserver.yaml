@@ -202,10 +202,14 @@ listeners:
     tls: false
     type: http
     x_forwarded: true
-
     resources:
       - names: [client, federation, webclient]
         compress: false
+
+  - port: 9000
+    type: metrics
+    bind_addresses:
+      - '0.0.0.0'
 
     # example additional_resources:
     #
