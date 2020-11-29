@@ -1,5 +1,8 @@
 extends: default
 
+ignore: |
+  /synapse/data/homeserver.yaml
+
 rules:
   comments-indentation: disable
   line-length: disable
