@@ -1,0 +1,25 @@
+version: '3.7'
+
+services:
+  archiveteam:
+    container_name: archiveteam
+    image: archiveteam/warrior-dockerfile
+    ports:
+      - 8001:8001
+    restart: always
+    networks:
+      - dist
+    dns:
+      - 84.200.69.80
+      - 84.200.70.40
+      - 88.198.91.187
+      - 95.216.181.228
+    dns_search:
+      - resolver1.dns.watch
+      - resolver2.dns.watch
+      - dot.centraleu.pi-dns.com
+      - dot.northeu.pi-dns.com
+
+networks:
+  dist:
+    external: true
