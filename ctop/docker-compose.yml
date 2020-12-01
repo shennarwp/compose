@@ -1,7 +1,7 @@
 version: '3.7'
 services:
   ctop:
-    container_name: ctop
+    container_name: ctop:0.7.5
     image: 'quay.io/vektorlab/ctop:latest'
     volumes:
       - '/var/run/docker.sock:/var/run/docker.sock:ro'
