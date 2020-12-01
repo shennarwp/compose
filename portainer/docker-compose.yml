@@ -3,7 +3,7 @@ version: '3.7'
 services:
   portainer:
     container_name: portainer
-    image: portainer/portainer-ce:latest
+    image: portainer/portainer-ce:2.0.0
     restart: always
     expose:
       - 9000
