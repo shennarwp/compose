@@ -67,6 +67,15 @@ scrape_configs:
     static_configs:
       - targets: ["synapse:9000"]
 
+  - job_name: "fail2ban-host"
+    scrape_interval: 10s
+    metrics_path: "/fail2ban-geo-exporter"
+    static_configs:
+      - targets: ["yourdomain.com"]
+    basic_auth:
+      username: 'username'
+      password: 'password'
+
 # alerting:
 #  alertmanagers:
 #  - scheme: http
