@@ -16,6 +16,7 @@ services:
       - ./credentials/logstash.htpasswd:/etc/nginx/basic_auth/logstash.htpasswd
       - ./credentials/elasticsearch.htpasswd:/etc/nginx/basic_auth/elasticsearch.htpasswd
       - ./credentials/kibana.htpasswd:/etc/nginx/basic_auth/kibana.htpasswd
+      - ./credentials/fail2ban-geo-exporter.htpasswd:/etc/nginx/basic_auth/fail2ban-geo-exporter.htpasswd
       - /path/to/nginx/data/certbot/conf:/etc/letsencrypt
       - /path/to/nginx/data/certbot/www:/var/www/certbot
     ports:
