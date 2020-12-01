@@ -3,7 +3,7 @@ version: '3.7'
 services:
   pihole-exporter:
     container_name: pihole-exporter
-    image: 'ekofr/pihole-exporter:0.0.10'
+    image: 'ekofr/pihole-exporter:amd64'
     restart: always
     environment:
       - PIHOLE_HOSTNAME=HOSTNAMEORIPADDRESS
