@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   jenkins:
-    image: jenkins-with-docker
+    image: jenkins-with-docker:2.269
     container_name: jenkins
     build:
       context: .
