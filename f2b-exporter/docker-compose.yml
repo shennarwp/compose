@@ -1,0 +1,20 @@
+version: '3.7'
+
+services:
+  fail2ban-geo-exporter:
+    container_name: fail2ban-geo-exporter
+    restart: unless-stopped
+    image: 'vdcloudcraft/fail2ban-geo-exporter:0.3.2'
+    volumes:
+      - '/path/to/fail2ban/data:/etc/fail2ban:ro'
+      - '/path/to/fail2ban/data/db/fail2ban.sqlite3:/var/lib/fail2ban/fail2ban.sqlite3:ro'
+      - '/path/to/geocitydb/GeoLite2-City.mmdb:/f2b-exporter/db/GeoLite2-City.mmdb:ro'
+      - '/path/to/conf.yml:/f2b-exporter/conf.yml'
+    networks:
+      - nginx
+    expose:
+      - 8081
+
+networks:
+  nginx:
+    external: true
