@@ -3,7 +3,7 @@ version: '3.7'
 services:
   transmission-exporter:
     container_name: transmission-exporter
-    image: metalmatze/transmission-exporter:master
+    image: metalmatze/transmission-exporter:0.3.0
     restart: always
     environment:
       TRANSMISSION_ADDR: http://transmission:9091
