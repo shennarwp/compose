@@ -10,15 +10,11 @@ services:
     networks:
       - dist
     dns:
+      - 116.202.176.26
       - 84.200.69.80
       - 84.200.70.40
       - 88.198.91.187
       - 95.216.181.228
-    dns_search:
-      - resolver1.dns.watch
-      - resolver2.dns.watch
-      - dot.centraleu.pi-dns.com
-      - dot.northeu.pi-dns.com
 
 networks:
   dist:
