@@ -6,7 +6,6 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 1,
-  "id": null,
   "links": [],
   "panels": [
     {
@@ -350,6 +349,7 @@
   },
   "timezone": "browser",
   "title": "Nginx",
-  "uid": null,
+  "id": "ngx",
+  "uid": "ngx",
   "version": 1
 }

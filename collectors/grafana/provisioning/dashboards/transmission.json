@@ -41,7 +41,6 @@
   "editable": true,
   "gnetId": 8259,
   "graphTooltip": 0,
-  "id": null,
   "iteration": 1538852173331,
   "links": [],
   "panels": [
@@ -755,7 +754,8 @@
   },
   "timezone": "",
   "title": "Transmission",
-  "uid": "y_TlWHJiz",
+  "id": "tra",
+  "uid": "tra",
   "version": 16,
   "description": "Transmission statistics prometheus dashboard "
 }

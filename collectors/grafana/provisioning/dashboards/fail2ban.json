@@ -51,7 +51,6 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": null,
   "iteration": 1590437176664,
   "links": [],
   "panels": [
@@ -248,6 +247,7 @@
   },
   "timezone": "",
   "title": "Fail2ban Banned Locations",
-  "uid": "pGlJmeRGk",
+  "id": "f2b",
+  "uid": "f2b",
   "version": 18
 }

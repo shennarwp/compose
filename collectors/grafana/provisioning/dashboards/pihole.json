@@ -6,7 +6,6 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": null,
   "links": [],
   "panels": [
     {
@@ -1122,6 +1121,7 @@
   },
   "timezone": "",
   "title": "Pihole",
-  "uid": null,
+  "id": "pih",
+  "uid": "pih",
   "version": 8
 }

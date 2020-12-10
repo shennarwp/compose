@@ -54,7 +54,6 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": null,
   "iteration": 1594646317221,
   "links": [
     {
@@ -7553,7 +7552,8 @@
   },
   "timezone": "",
   "title": "Synapse",
-  "uid": "000000012",
+  "id": "syn",
+  "uid": "syn",
   "variables": {
     "list": []
   },

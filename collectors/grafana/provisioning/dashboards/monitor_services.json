@@ -1,5 +1,6 @@
 {
-  "id": null,
+  "id": "mon",
+  "uid": "mon",
   "title": "Monitor Services",
   "tags": [
     "prometheus"
