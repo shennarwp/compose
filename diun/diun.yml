@@ -1,0 +1,23 @@
+notif:
+  matrix:
+    homeserverURL: https://matrix.org
+    user: "@foo:matrix.org"
+    password: bar
+    roomID: "!abcdefGHIjklmno:matrix.org"
+    msgType: notice
+
+  discord:
+    webhookURL: https://discordapp.com/api/webhooks/1234567890/Abcd-eFgh-iJklmNo_pqr
+    mentions:
+      - "@here"
+      - "@everyone"
+    timeout: 10s
+
+watch:
+  workers: 20
+  schedule: "0 */6 * * *"
+
+providers:
+  docker:
+    watchStopped: false
+    watchByDefault: true

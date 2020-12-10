@@ -1,0 +1,22 @@
+version: '3.7'
+
+services:
+  diun:
+    image: crazymax/diun:4.9.0
+    container_name: diun
+    volumes:
+      - "./data:/data"
+      - "./diun.yml:/diun.yml:ro"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    environment:
+      - "TZ=Europe/Berlin"
+      - "LOG_LEVEL=info"
+      - "LOG_JSON=true"
+      - "DIUN_PROVIDERS_DOCKER=true"
+    restart: always
+    networks:
+      - nginx
+
+networks:
+  nginx:
+    external: true
