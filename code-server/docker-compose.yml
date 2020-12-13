@@ -1,0 +1,20 @@
+version: '3.7'
+
+services:
+  code-server:
+    container_name: vscode
+    image: 'codercom/code-server:3.7.4'
+    restart: always
+    expose:
+      - 8080
+    volumes:
+      - '~/:/home/coder/project'
+      - './config:/home/coder/.config'
+    command:
+      - '--disable-telemetry'
+    networks:
+      - nginx
+
+networks:
+  nginx:
+    external: true
