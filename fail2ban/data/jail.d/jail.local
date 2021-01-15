@@ -282,10 +282,13 @@ action = %(action_)s
 # normal (default), ddos, extra or aggressive (combines all).
 # See "tests/files/logs/sshd" or "filter.d/sshd.conf" for usage example and details.
 #mode   = normal
-#enabled = true
-port    = ssh
+enabled = true
+chain = INPUT
+port = ssh
+filter = sshd[mode=aggressive]
 logpath = /var/log/auth.log
-backend = %(sshd_backend)s
+maxretry = 2
+findtime  = 7200
 
 
 [dropbear]
